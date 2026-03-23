@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>João Saveia - Sobre Nós</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+
+<!-- favicon-->
+<link href="img/logosaveia.png" rel="icon">
+<!-- css -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
+<link href="css/flexslider.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+ 
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<style>
+    /* Estilos para melhorar a página Sobre Nós */
+    .about-section {
+        padding: 60px 0;
+    }
+    
+    .page-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .page-header h2 {
+        color: #2c3e50;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .page-header h2:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: #3498db;
+    }
+    
+    .showcase-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 60px;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    
+    .showcase-image {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .showcase-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease;
+    }
+    
+    .showcase-image img:hover {
+        transform: scale(1.03);
+    }
+    
+    .showcase-text {
+        flex: 1.2;
+    }
+    
+    .showcase-text h3 {
+        color: #2c3e50;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.3;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .showcase-text h3:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: #3498db;
+    }
+    
+    .showcase-text p {
+        color: #5d6d7e;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+    
+    .values-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+    
+    .values-list li {
+        margin-bottom: 12px;
+        padding-left: 30px;
+        position: relative;
+        color: #5d6d7e;
+        line-height: 1.6;
+    }
+    
+    .values-list li:before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #27ae60;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    
+    .mission-vision-values {
+        margin-top: 60px;
+    }
+    
+    .mv-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+    }
+    
+    .mv-card {
+        background: white;
+        border-radius: 12px;
+        padding: 35px 30px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border-top: 4px solid #3498db;
+        text-align: center;
+        height: 100%;
+    }
+    
+    .mv-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    
+    .mv-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #3498db, #2c3e50);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        color: white;
+        font-size: 28px;
+    }
+    
+    .mv-title {
+        color: #2c3e50;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+    
+    .mv-content {
+        color: #5d6d7e;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+    
+    .values-list-inline {
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+    .values-list-inline p {
+        margin-bottom: 10px;
+        padding-left: 25px;
+        position: relative;
+    }
+    
+    .values-list-inline p strong {
+        color: #2c3e50;
+        font-weight: 600;
+    }
+    
+    .values-list-inline p:before {
+        content: '•';
+        position: absolute;
+        left: 10px;
+        color: #3498db;
+        font-size: 18px;
+    }
+    
+    .approach-section {
+        margin-top: 60px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    
+    .approach-title {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    
+    .approach-content {
+        color: #5d6d7e;
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 991px) {
+        .showcase-content {
+            flex-direction: column;
+            padding: 30px;
+            gap: 30px;
+        }
+        
+        .mv-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .page-header h2 {
+            font-size: 32px;
+        }
+        
+        .showcase-text h3 {
+            font-size: 24px;
+        }
+        
+        .approach-section {
+            padding: 30px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .about-section {
+            padding: 40px 0;
+        }
+        
+        .showcase-content {
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .mv-grid {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .page-header h2 {
+            font-size: 28px;
+        }
+        
+        .showcase-text h3 {
+            font-size: 22px;
+        }
+        
+        .mv-card {
+            padding: 30px 25px;
+        }
+        
+        .approach-section {
+            padding: 25px;
+            margin-top: 40px;
+        }
+    }
+    
+    @media (max-width: 575px) {
+        .showcase-content {
+            padding: 20px;
+        }
+        
+        .mv-card {
+            padding: 25px 20px;
+        }
+        
+        .page-header h2 {
+            font-size: 24px;
+        }
+        
+        .showcase-text h3 {
+            font-size: 20px;
+        }
+        
+        .mv-title {
+            font-size: 20px;
+        }
+        
+        .approach-section {
+            padding: 20px;
+        }
+    }
+    
+    /* Estilo para o cabeçalho ativo */
+    .navbar-nav > li.active > a {
+        color: #fff;
+        background-color: #3498db;
+    }
+    
+    .navbar-nav .dropdown.active > a {
+        color: #fff;
+        background-color: #3498db;
+    }
+    
+    /* Animação de entrada */
+    .mv-card {
+        animation: fadeInUp 0.6s ease forwards;
+        opacity: 0;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+</head>
+<body>
+<div id="wrapper">
+<div class="topbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="pull-left hidden-xs">Contacte-nos</p>
+        <div  class="pull-right">
+          <ul class="social-network">
+            <li><a href="https://www.facebook.com/joaomanuel.saveiafrancisco?ref=brem" target="_blank" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/joaomanuelsaveia?igshid=1l9it5htjepre" target="_blank" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <p class="pull-right"><i class="fa fa-phone"></i>Tel. (+244) 923-255-835</p>
+      </div>
+    </div>
+  </div>
+</div>
+	<!-- start header -->
+	<header>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php"><img src="img/logosaveia.png" alt="logo"/></a>
+        </div>
+        <div class="navbar-collapse collapse ">
+          <ul class="nav navbar-nav">
+            <li><a href="index.php">Home</a></li>
+            
+            <li class="dropdown active">
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Sobre Nós <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="about-one.html">Perfil</a></li>
+                <li class="active"><a href="about.html">Perfil Institucional</a></li>
+                <li><a href="contact.html">Contactos Gerais</a></li>
+              </ul>
+            </li> 
+
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Publicações<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="publicacao-artigo.html">Artigos</a></li>
+                <li><a href="publicacao-livro.html">Livros</a></li>
+              </ul>
+            </li> 
+            
+            <li><a href="services.html">Serviços</a></li>
+            <li><a href="galeria.html">Galeria & Imagem</a></li>
+
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Destaques<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="destaque-noticias.html">Noticias</a></li>
+                <li><a href="destaque-eventos.html">Eventos</a></li>
+                <li><a href="destaque-s_leitura.html">Sugestões de Leitura</a></li>
+              </ul>
+            </li> 
+            
+            <li><a href="midia.html">Midia</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Sobre nós</h2>
+			</div>
+		</div>
+	</div>
+	</section>
+
+	<section class="section-padding gray-bg about-section">
+		<div class="container">
+			<!-- Conteúdo Principal -->
+			<div class="showcase-content">
+				<div class="showcase-image">
+					<img src="img/logo-big.png" alt="João Saveia - Logo">
+				</div>
+				<div class="showcase-text">
+					<h3>PERFIL INSTITUCIONAL</h3>
+					<p>A nossa atuação está alicerçada no tripé Investigação, Formação e Consultoria e fundamenta-se em uma abordagem interdisciplinar, agregando saberes de diversas áreas de conhecimento, com destaque para a Psicologia, Pedagogia, Sociologia, Gestão, Medicina do Trabalho, Antropologia, Engenharia de Produção, Ergonomia, Economia, História, Direito e Relações Internacionais.</p>
+					<p>Tem como objetivo desenvolver estudos e investigações sobre processos organizacionais e transformações do mundo do trabalho, assim como promover ações de formação e prestar serviços de consultoria, voltados, prioritariamente, para a Gestão de Pessoas e desenvolvimento organizacional.</p>
+					
+					<p><strong>Mais especificamente, buscamos:</strong></p>
+					<ul class="values-list">
+						<li>Promover e incentivar a prática de investigação científica, como um dos requisitos para uma atuação profissional competente e ética.</li>
+						<li>Contribuir para a formação de recursos humanos diferenciados</li>
+						<li>Promover o desenvolvimento das organizações</li>
+						<li>Promover saúde, qualidade de vida e bem-estar no trabalho</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!-- Missão, Visão e Valores -->
+			<div class="mission-vision-values">
+				<div class="mv-grid">
+					<!-- Missão -->
+					<div class="mv-card">
+						<div class="mv-icon">
+							<i class="fa fa-bullseye"></i>
+						</div>
+						<h4 class="mv-title">Missão</h4>
+						<div class="mv-content">
+							<p>Gerar, aplicar, gerir e disseminar conhecimento científico sobre Psicologia Organizacional e do Trabalho, contribuindo para o desenvolvimento das organizações e para a qualidade de vida e bem-estar no trabalho.</p>
+						</div>
+					</div>
+					
+					<!-- Visão -->
+					<div class="mv-card">
+						<div class="mv-icon">
+							<i class="fa fa-eye"></i>
+						</div>
+						<h4 class="mv-title">Visão</h4>
+						<div class="mv-content">
+							<p>Ser referência em Angola na área de Psicologia Organizacional e do Trabalho.</p>
+						</div>
+					</div>
+					
+					<!-- Valores -->
+					<div class="mv-card">
+						<div class="mv-icon">
+							<i class="fa fa-heart"></i>
+						</div>
+						<h4 class="mv-title">Valores</h4>
+						<div class="mv-content">
+							<div class="values-list-inline">
+								<p><strong>Liberdade</strong> para criar</p>
+								<p><strong>Autonomia</strong> para fazer o que é certo</p>
+								<p><strong>Respeito</strong> pelo outro e pelas instituições</p>
+								<p><strong>Competência</strong> para identificar problemas e propor soluções</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Abordagem Interdisciplinar -->
+			<div class="approach-section">
+				<h3 class="approach-title">Abordagem Interdisciplinar</h3>
+				<div class="approach-content">
+					<p>A nossa metodologia integra conhecimentos de diversas áreas para oferecer soluções completas e eficazes. Trabalhamos com uma visão holística que combina teoria e prática, sempre adaptada às necessidades específicas de cada organização e contexto.</p>
+					<p>Esta abordagem multidisciplinar permite-nos desenvolver estratégias inovadoras que promovem o crescimento sustentável e o bem-estar organizacional.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-3">
+				<div class="widget">
+					<h5 class="widgetheading">Contactos Gerais</h5>
+					<address>
+						<strong>João Saveia</strong><br>
+						Condominio Flores de Talatona, Casa D03 Talatona<br>
+						Luanda, Angola
+					</address>
+					<p>
+						<i class="icon-phone"></i> (+244) 923-255-835<br>
+						<i class="icon-envelope-alt"></i> jmsaveia@joaosaveia.ao
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="widget">
+					<h5 class="widgetheading">Links de interesse</h5>
+					<ul class="link-list">
+						<li><a target="_blank" href="https://www.abrapso.org.br">ABRAPSO - Associação Brasileira de Psicologia Social</a></li>
+						<li><a target="_blank" href="http://www.anpad.org.br">ANPAD – Associação Nacional de Pós-Graduação e Pesquisa em Administração</a></li>
+						<li><a target="_blank" href="https://www.anpepp.org.br">ANPEPP - Associação Nacional de Pesquisa e Pós-Graduação em Psicologia</a></li>
+						<li><a target="_blank" href="http://www.apa.org">APA - American Psychological Association</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="widget">
+					<h5 class="widgetheading">Outras Entidades</h5>
+					<ul class="link-list">
+						<li><a target="_blank" href="http://www.eawop.org">EAWOP - European Association of Work and Organizational Psychology</a></li>
+						<li><a target="_blank" href="http://www.psi-plp.org">PSIPLP – Federação das Associações de Psicólogos dos Países de Língua Portuguesa</a></li>
+						<li><a target="_blank" href="http://www.sbpot.org.br">SBPOT - Associação Brasileira de Psicologia Organizacional e do Trabalho</a></li>
+						<li><a target="_blank" href="http://www.siop.org">SIOP - Society for Industrial and Organizational Psychology</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="widget">
+					<h5 class="widgetheading">Newsletter</h5>
+					<ul class="link-list">
+						<form name="sentMessage" id="contactForm" novalidate>
+							<div class="control-group">
+								<div class="controls">
+									<input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Por favor insira o email" />
+								</div><br>
+								<button type="submit" class="btn btn-primary pull-left">Enviar</button>
+						</form>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						<span>
+							Copyright © João Saveia <span id="date"></span>. Todos os Direitos Reservados.
+						</span>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<ul class="social-network">
+						<li><a href="https://www.facebook.com/joaomanuel.saveiafrancisco?ref=brem" target="_blank" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="https://instagram.com/joaomanuelsaveia?igshid=1l9it5htjepre" target="_blank" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script> 
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<!-- Vendor Scripts -->
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+
+<script>
+    var date = new Date();
+    document.getElementById("date").innerHTML = date.getFullYear().toString();
+    
+    // Animação de entrada dos cards
+    $(document).ready(function() {
+        $('.mv-card').each(function(i) {
+            var $card = $(this);
+            setTimeout(function() {
+                $card.css('animation-delay', (i * 0.2) + 's');
+            }, 100);
+        });
+    });
+</script>
+</body>
+</html>
