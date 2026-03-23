@@ -1,0 +1,375 @@
+    /* Estilos para melhorar a página do perfil */
+    .profile-section {
+        padding: 60px 0;
+    }
+    
+    .page-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .page-header h2 {
+        color: #2c3e50;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .page-header h2:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: #3498db;
+    }
+    
+    .profile-showcase {
+        display: flex;
+        align-items: flex-start;
+        gap: 50px;
+        margin-bottom: 60px;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    
+    .profile-image {
+        flex: 1;
+        max-width: 400px;
+    }
+    
+    .profile-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease;
+    }
+    
+    .profile-image img:hover {
+        transform: scale(1.02);
+    }
+    
+    .profile-content {
+        flex: 1.5;
+    }
+    
+    .profile-title {
+        color: #2c3e50;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.3;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .profile-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: #3498db;
+    }
+    
+    .profile-text {
+        color: #5d6d7e;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+    
+    .highlight-name {
+        color: #3498db;
+        font-weight: 600;
+    }
+    
+    .career-timeline {
+        margin-top: 60px;
+    }
+    
+    .timeline-title {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .timeline-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: #3498db;
+    }
+    
+    .timeline-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+    }
+    
+    .timeline-card {
+        background: white;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border-left: 4px solid #3498db;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .timeline-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    
+    .timeline-card:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(52, 152, 219, 0.05));
+        border-radius: 0 0 0 60px;
+    }
+    
+    .card-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #3498db, #2c3e50);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        color: white;
+        font-size: 22px;
+    }
+    
+    .card-title {
+        color: #2c3e50;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+    
+    .card-content {
+        color: #5d6d7e;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .achievements-section {
+        margin-top: 60px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    
+    .achievements-title {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .achievements-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: #3498db;
+    }
+    
+    .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+    
+    .achievement-item {
+        background: white;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(52, 152, 219, 0.1);
+        text-align: center;
+    }
+    
+    .achievement-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        border-color: rgba(52, 152, 219, 0.3);
+    }
+    
+    .achievement-icon {
+        color: #3498db;
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    
+    .achievement-text {
+        color: #5d6d7e;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 991px) {
+        .profile-showcase {
+            flex-direction: column;
+            padding: 30px;
+            gap: 30px;
+        }
+        
+        .profile-image {
+            max-width: 100%;
+        }
+        
+        .timeline-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .page-header h2 {
+            font-size: 32px;
+        }
+        
+        .profile-title {
+            font-size: 24px;
+        }
+        
+        .achievements-section {
+            padding: 30px;
+        }
+        
+        .achievements-grid {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .profile-section {
+            padding: 40px 0;
+        }
+        
+        .profile-showcase {
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .timeline-grid {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .page-header h2 {
+            font-size: 28px;
+        }
+        
+        .profile-title {
+            font-size: 22px;
+        }
+        
+        .timeline-card {
+            padding: 25px;
+        }
+        
+        .achievements-section {
+            padding: 25px;
+            margin-top: 40px;
+        }
+        
+        .achievements-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    @media (max-width: 575px) {
+        .profile-showcase {
+            padding: 20px;
+        }
+        
+        .timeline-card {
+            padding: 20px;
+        }
+        
+        .page-header h2 {
+            font-size: 24px;
+        }
+        
+        .profile-title {
+            font-size: 20px;
+        }
+        
+        .card-title {
+            font-size: 18px;
+        }
+        
+        .achievements-section {
+            padding: 20px;
+        }
+    }
+    
+    /* Estilo para o cabeçalho ativo */
+    .navbar-nav > li.active > a {
+        color: #fff;
+        background-color: #3498db;
+    }
+    
+    .navbar-nav .dropdown.active > a {
+        color: #fff;
+        background-color: #3498db;
+    }
+    
+    .navbar-nav .dropdown-menu > li.active > a {
+        color: #3498db;
+        font-weight: 600;
+    }
+    
+    /* Animação de entrada */
+    .timeline-card, .achievement-item {
+        animation: fadeInUp 0.6s ease forwards;
+        opacity: 0;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }

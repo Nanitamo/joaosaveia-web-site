@@ -1,0 +1,371 @@
+    /* Estilos para melhorar o alinhamento dos cards de eventos */
+    .event-card {
+        margin-bottom: 30px;
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
+    
+    .event-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .event-card-inner {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .event-image {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+    }
+    
+    .event-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .event-card:hover .event-image img {
+        transform: scale(1.05);
+    }
+    
+    .event-content {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .event-date {
+        color: #e74c3c;
+        font-size: 14px;
+        margin-bottom: 10px;
+        display: block;
+        line-height: 1.4;
+    }
+    
+    .event-date i {
+        margin-right: 5px;
+    }
+    
+    .event-content p {
+        flex-grow: 1;
+        margin-bottom: 15px;
+        color: #666;
+        line-height: 1.6;
+    }
+    
+    .event-link {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 10px;
+        display: inline-block;
+        transition: color 0.3s ease;
+    }
+    
+    .event-link:hover {
+        color: #2980b9;
+        text-decoration: underline;
+    }
+    
+    .row-equal-height {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .row-equal-height > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Estilo do botão Saiba Mais */
+    .btn-saiba-mais {
+        background-color: #aa9464;
+        color: #043a49;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+        align-self: flex-start;
+    }
+    
+    .btn-saiba-mais:hover {
+        background-color: #c0392b;
+        color: white;
+        text-decoration: none;
+    }
+    
+    /* Estilos do Modal */
+    .modal-content {
+        border-radius: 8px;
+        border: none;
+    }
+    
+    .modal-header {
+        background-color: #aa9464;
+        color: #043a49;
+        border-radius: 8px 8px 0 0;
+        padding: 15px 20px;
+    }
+    
+    .modal-header h4 {
+        margin: 0;
+        font-size: 18px;
+    }
+    
+    .modal-header .close {
+        color: white;
+        opacity: 0.8;
+    }
+    
+    .modal-header .close:hover {
+        opacity: 1;
+    }
+    
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .modal-image {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+    
+    .modal-detalhes {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+    
+    .modal-detalhes p {
+        margin: 5px 0;
+        color: #555;
+    }
+    
+    .modal-detalhes i {
+        color: #e74c3c;
+        width: 20px;
+        margin-right: 10px;
+    }
+    
+    .modal-descricao {
+        color: #666;
+        line-height: 1.6;
+    }
+    
+    .modal-footer {
+        border-top: 1px solid #eee;
+        padding: 15px 20px;
+    }
+    
+    .modal-footer .btn-default {
+        background-color: #95a5a6;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 4px;
+    }
+    
+    .modal-footer .btn-default:hover {
+        background-color: #7f8c8d;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 991px) {
+        .event-image {
+            height: 200px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .event-image {
+            height: 180px;
+        }
+        
+        .event-card {
+            margin-bottom: 20px;
+        }
+        
+        .event-content {
+            padding: 15px;
+        }
+        
+        .modal-dialog {
+            margin: 20px;
+        }
+    }
+    
+    @media (max-width: 575px) {
+        .event-image {
+            height: 160px;
+        }
+    }
+    
+    /* Estilo para quando não há descrição */
+    .no-description {
+        min-height: 40px;
+    }
+    
+    /* loading.css - Estilos do Loading Screen */
+
+/* Estilos para o Loading Screen - Fundo branco com logo centralizada */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-content {
+    text-align: center;
+    color: #333;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.loading-logo {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 30px;
+    animation: pulse 2s infinite;
+}
+
+.loading-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.loading-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(4, 58, 73);
+    margin: 10px 0 5px;
+    letter-spacing: 1px;
+}
+
+.loading-title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    border: 4px solid rgba(4, 58, 73, 0.1);
+    border-radius: 50%;
+    border-top-color: rgb(4, 58, 73);
+    animation: spin 1s ease-in-out infinite;
+}
+
+.loading-text {
+    font-size: 14px;
+    color: #888;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    animation: fadeInOut 1.5s ease-in-out infinite;
+}
+
+.loading-progress {
+    width: 300px;
+    height: 4px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    margin: 25px auto 0;
+    overflow: hidden;
+}
+
+.loading-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: rgb(4, 58, 73);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(4, 58, 73, 0.3);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* Garantir que o conteúdo principal só apareça após o loading */
+#wrapper {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+#wrapper.loaded {
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .loading-progress {
+        width: 250px;
+    }
+    
+    .loading-logo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .loading-name {
+        font-size: 20px;
+    }
+    
+    .loading-title {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .loading-progress {
+        width: 200px;
+    }
+    
+    .loading-logo {
+        width: 120px;
+        height: 120px;
+    }
+}

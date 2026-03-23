@@ -1,0 +1,13 @@
+# Logs de erro do servidor
+error_log
+*.log
+
+# Editor
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Página de boas-vindas do hosting
+index2.php
