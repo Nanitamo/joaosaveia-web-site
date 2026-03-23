@@ -1,0 +1,166 @@
+    /* Estilos para melhorar a apresentação dos artigos */
+    .articles-section {
+        padding: 40px 0;
+    }
+    
+    .article-list {
+        margin: 30px 0;
+        padding: 0;
+    }
+    
+    .article-item {
+        background: #fff;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        padding: 25px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        border-left: 4px solid #3498db;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .article-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    
+    .article-title {
+        color: #2c3e50;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+    
+    .article-title a {
+        color: #2c3e50;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .article-title a:hover {
+        color: #3498db;
+        text-decoration: underline;
+    }
+    
+    .article-info {
+        color: #7f8c8d;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        padding-left: 20px;
+        border-left: 2px solid #ecf0f1;
+    }
+    
+    .article-info strong {
+        color: #34495e;
+    }
+    
+    .article-link {
+        display: inline-block;
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 5px 0;
+        transition: all 0.3s ease;
+    }
+    
+    .article-link i {
+        margin-right: 5px;
+    }
+    
+    .article-link:hover {
+        color: #2980b9;
+        text-decoration: underline;
+        transform: translateX(5px);
+    }
+    
+    .page-intro {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #34495e;
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #3498db;
+    }
+    
+    .article-counter {
+        display: inline-block;
+        background: #3498db;
+        color: white;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 28px;
+        font-weight: 600;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    
+    /* Estilos para lista */
+    .article-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .article-list li {
+        margin-bottom: 25px;
+        position: relative;
+        padding-left: 0;
+    }
+    
+    .article-list li:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 767px) {
+        .article-item {
+            padding: 20px;
+        }
+        
+        .article-title {
+            font-size: 16px;
+        }
+        
+        .article-info {
+            font-size: 13px;
+        }
+        
+        .page-intro {
+            padding: 15px;
+            font-size: 15px;
+        }
+    }
+    
+    @media (max-width: 575px) {
+        .article-item {
+            padding: 15px;
+        }
+        
+        .article-title {
+            font-size: 15px;
+        }
+        
+        .article-counter {
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 12px;
+        }
+    }
+    
+    /* Estilo para o cabeçalho ativo */
+    .navbar-nav .dropdown.active > a {
+        color: #fff;
+        background-color: #3498db;
+    }
+    
+    .navbar-nav .dropdown-menu > li.active > a {
+        color: #3498db;
+        font-weight: 600;
+    }
